@@ -1,22 +1,10 @@
-#Robert needs help: 
-#I still don't know how to get the .isalpha() thingy to work with two-word cities
-#Like New York for example. That'll trigger that while city while loop
-#Does the way I have it set up right now count as try blocks? Please?
-#It runs multiple times until user shutoff, but it's sloppy. Me no likey.
-
-
-
-
 import json,requests 
 base_url="https://api.openweathermap.org/data/2.5/weather"
 appid=("3a8be193e8bfd32e378c1fe5e0bede9f")
 
-counter=0
-while counter>0:
-	question_3=input("Do you wish to search for another city?")
-	question_3=question_3.lower()
-	if question_3==("no"):
-		exit()
+
+
+def main():
 
 
 	message=input("Do you want to search by city or zipcode?")
@@ -82,4 +70,9 @@ while counter>0:
 	if question_2==("Yes"):
 		max_temp_conversion()
 		print(variable_name," C")
-	counter+=1
+
+
+while True:
+	main()
+	if input("Repeat the program?(Y/N): ").strip().upper() != ("Y"):
+	  break
