@@ -13,12 +13,8 @@ def main():
 
 	if message==("city"):
 		city=input("Input city name here: ")
-		test_value=city.isalpha()
-		while test_value!=True:# https://datascienceparichay.com/article/python-check-if-string-contains-only-letters/
-			city=input("Please enter a vaild response: ")
-			test_value=city.isalpha()
-
-		url_true=(f"{base_url}?q={city}&units=imperial&APPID={appid}")
+		try:
+			url_true=(f"{base_url}?q={city}&units=imperial&APPID={appid}")
 
 	elif message==("zipcode"):
 		zipcode=input("Enter zipcode here: ")
