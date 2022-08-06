@@ -1,4 +1,8 @@
-import json,requests 
+try:
+	import json,requests 
+except Exception as e:
+	print(e)
+
 base_url="https://api.openweathermap.org/data/2.5/weather"
 appid=("3a8be193e8bfd32e378c1fe5e0bede9f")
 
@@ -13,12 +17,10 @@ def main():
 
 	if message==("city"):
 		city=input("Input city name here: ")
-		test_value=city.isalpha()
-		while test_value!=True:# https://datascienceparichay.com/article/python-check-if-string-contains-only-letters/
-			city=input("Please enter a vaild response: ")
-			test_value=city.isalpha()
-
-		url_true=(f"{base_url}?q={city}&units=imperial&APPID={appid}")
+		try:
+			url_true=(f"{base_url}?q={city}&units=imperial&APPID={appid}")
+		except Exception as e:
+			print(e)
 
 	elif message==("zipcode"):
 		zipcode=input("Enter zipcode here: ")
