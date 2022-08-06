@@ -1,4 +1,8 @@
-import json,requests 
+try:
+	import json,requests 
+except Exception as e:
+	print(e)
+
 base_url="https://api.openweathermap.org/data/2.5/weather"
 appid=("3a8be193e8bfd32e378c1fe5e0bede9f")
 
@@ -15,6 +19,8 @@ def main():
 		city=input("Input city name here: ")
 		try:
 			url_true=(f"{base_url}?q={city}&units=imperial&APPID={appid}")
+		except Exception as e:
+			print(e)
 
 	elif message==("zipcode"):
 		zipcode=input("Enter zipcode here: ")
