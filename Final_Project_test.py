@@ -2,7 +2,7 @@ try:
   import json,requests
 except Exception as e:
   print(e)
-  print('(in a scotish accent)'"I'm giving her all she's got Captain!")
+  print('(in a scotish accent)',"I'm giving her all she's got Captain!")
 else:
   print("Though I walk through the valley of the shadow of programming, I shall fear no error.")
 base_url="https://api.openweathermap.org/data/2.5/weather"
