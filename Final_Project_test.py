@@ -72,3 +72,4 @@ while True:
 	if input("Repeat the program?(Y/N): ").strip().upper() != ("Y"):
 	  break
 #This last while loop with the if statement and the idea to put everything into a main() function came from https://stackoverflow.com/questions/41365922/how-do-i-repeat-the-program-in-python
+#Degree symbol code used from: https://theprogrammingexpert.com/python-degree-symbol/#:~:text=In%20Python%2C%20to%20print%20the,degree%20sign%20'%5Cu00B0'.
